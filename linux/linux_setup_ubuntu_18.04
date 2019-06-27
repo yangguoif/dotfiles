@@ -1,0 +1,33 @@
+# Set short-cut to open terminal
+set start terminal to ctrl + t / cmd + t
+
+# install Chinese input
+*sudo apt-get install ibus-pinyin
+*ibus restart
+
+# Download Atom
+
+# Install Tmux
+cp dotfile/tmux.conf ~/.tmux.conf
+
+# Setup GitHub
+# Setup Github SSH
+# Clone git repositories via SSH
+
+# install ruby
+sudo apt install ruby
+
+# install rbenv
+cd tmp
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
+# enable rbenv install for different ruby version
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# disable local gem doc
+echo "gem: --no-document" > ~/.gemrc
+
+# install bundler
+sudo gem install bundler

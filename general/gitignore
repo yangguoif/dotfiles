@@ -1,0 +1,12 @@
+*.swp
+*.swo
+
+.envrc
+.foreman
+Procfile
+
+.ruby-version
+/tags
+bin/spring
+.DS_Store
+yarn-error.log

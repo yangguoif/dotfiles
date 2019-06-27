@@ -1,0 +1,38 @@
+# good resource
+curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
+
+install homebrew + update
+brew cask install google-chrome
+brew cask install atom
+brew install git
+brew install openssl
+brew cask install iterm2
+brew install tmux
+
+
+
+
+
+install docker
+install postgresql
+install pgadmin4
+install 1password
+install VLC
+install slack
+install wunderlist
+install adobe acrobot reader
+install github desktop
+install wechat
+install redis
+brew "keychain"
+brew "direnv"
+brew "diff-so-fancy"
+brew "nmap"
+brew "m-cli"
+
+
+
+
+
+# tmux powerup
+pip install powerline-status

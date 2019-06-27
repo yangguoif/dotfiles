@@ -1,0 +1,35 @@
+install homebrew + update
+
+brew cask install google-chrome
+  install rest-let client
+brew cask install atom
+brew install openssl
+brew cask install iterm2
+
+brew install git
+  generate ssh key and add to ssh agent, keychain
+  setup Github ssh connection
+
+brew install tmux
+  brew install reattach-to-user-namespace
+  cp tmux.conf to ~/.tmux.conf
+
+cp inputrc to ~/.inputrc
+
+download postgre app
+  possibly brew install postgresql
+brew cask install pgadmin4
+
+brew install m-cli
+brew install redis
+
+brew install asdf
+  setup ruby version
+  setup bundler
+
+brew install direnv
+  setup .envrc
+  setup global git ignore
+
+download Github-desktop
+brew cask install 1password
