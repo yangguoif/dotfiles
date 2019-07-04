@@ -20,6 +20,9 @@ brew install redis
     brew services start redis
 brew install direnv
 brew install python3
+brew install awscli
+brew install postgresql
+brew cask install pgadmin4
 brew cask install vlc
 brew cask install slack
 brew cask install wechat
@@ -39,14 +42,4 @@ cp inputrc to ~/.inputrc
 
 
 TODO:
-install postgresql
-install pgadmin4
 brew "diff-so-fancy"
-aws cli
-# tmux powerup
-pip install powerline-status
-
-
-download postgre app
-  possibly brew install postgresql
-brew cask install pgadmin4
