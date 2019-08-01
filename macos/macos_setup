@@ -30,6 +30,7 @@ brew cask install adobe-acrobat-reader
 brew install m-cli
 brew install nmap
 brew install youtube-dl
+brew install bash-git-prompt
 
 # Download image to install
 Docker
