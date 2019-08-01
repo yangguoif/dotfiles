@@ -32,9 +32,7 @@ brew install m-cli
 brew install nmap
 brew install youtube-dl
 brew install bash-git-prompt
-
-# Download image to install
-Docker
+brew cask install docker
 
 # Download from App Store
 Wunderlist
