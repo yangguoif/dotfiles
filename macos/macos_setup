@@ -1,6 +1,8 @@
 # good resource
 curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
 
+install xcode
+    enable tools in terminal env: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 install homebrew + update
 brew cask install 1password
 brew cask install google-chrome
@@ -24,15 +26,21 @@ brew install awscli
 brew install postgresql
     createdb `whoami`
 brew cask install pgadmin4
-brew cask install vlc
-brew cask install slack
-brew cask install wechat
 brew cask install adobe-acrobat-reader
 brew install m-cli
 brew install nmap
-brew install youtube-dl
 brew install bash-git-prompt
 brew cask install docker
+brew install yarn
+
+
+# Optional
+brew tap heroku/brew && brew install heroku
+brew install youtube-dl
+brew cask install vlc
+brew cask install slack
+brew cask install wechat
+
 
 # Download from App Store
 Wunderlist
