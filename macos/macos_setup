@@ -23,6 +23,7 @@ brew install redis
 brew install direnv
 brew install python3
 brew install awscli
+    aws configure --profile user-name
 brew install postgresql
     createdb `whoami`
 brew cask install pgadmin4
