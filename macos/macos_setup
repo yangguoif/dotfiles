@@ -34,6 +34,16 @@ brew install bash-git-prompt
 brew cask install docker
 brew install yarn
 
+# Jenkins
+brew cask install homebrew/cask-versions/adoptopenjdk8
+brew install jenkins-lts
+
+# LocalStack for mocking AWS services
+pip install localstack
+pip install awscli-local
+
+# GraphiQL App
+brew cask install graphiql
 
 # Optional
 brew tap heroku/brew && brew install heroku
