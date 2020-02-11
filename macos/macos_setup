@@ -34,6 +34,20 @@ brew install bash-git-prompt
 brew cask install docker
 brew install yarn
 
+brew install kubectl
+brew cask install virtualbox
+brew tap "puma/puma"
+brew install "puma/puma/puma-dev"
+
+# "Setting up puma-dev"
+sudo puma-dev -setup
+puma-dev -install
+# may need
+# security add-trusted-cert -k login.keychain-db ~/Library/Application\ Support/io.puma.dev/cert.pem
+cd ~/.puma-dev
+echo port_number > project_name
+
+
 # Jenkins
 brew cask install homebrew/cask-versions/adoptopenjdk8
 brew install jenkins-lts
