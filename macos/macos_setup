@@ -67,6 +67,7 @@ brew install youtube-dl
 brew cask install vlc
 brew cask install slack
 brew cask install wechat
+brew cask install postman
 
 
 # Download from App Store
@@ -74,6 +75,9 @@ Wunderlist
 
 cp inputrc to ~/.inputrc
 
+For trading
+* Download ThinkOrSwim
+* Download Interactive Brokers
 
 
 TODO:
