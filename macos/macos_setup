@@ -19,6 +19,7 @@ brew install --cask atom
     sort-lines
 
 brew install reattach-to-user-namespace
+brew install bash-completion
 brew install tmux
   copy tmux.conf.macos to ~/.tmux.conf
 ln -s /Users/yangguo/Documents/personal/dotfiles/macos/bashrc ~/.bashrc
