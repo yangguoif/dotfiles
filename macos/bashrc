@@ -122,6 +122,11 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # eval "$(hub alias -s)"
 
+# path for python referencing to brew installed python3
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# path for pip installation to work
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
 

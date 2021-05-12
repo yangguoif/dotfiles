@@ -82,10 +82,10 @@ brew install --cask virtualbox
 brew install --cask drawio
 
 
-
 For trading
 * Download ThinkOrSwim
 * Download Interactive Brokers
+* Install zipline: https://zipline.ml4trading.io/install.html
 
 
 TODO:
