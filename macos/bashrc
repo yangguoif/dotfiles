@@ -129,6 +129,7 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # export PATH="$HOME/.bin:$PATH"
 
