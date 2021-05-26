@@ -7,12 +7,18 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc requires nodejs installed
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'bagrat/vim-buffet'
 Plug 'dyng/ctrlsf.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'inkarkat/vim-ReplaceWithRegister'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-line'
 call plug#end()
 
 colorscheme gruvbox
@@ -40,6 +46,15 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
+" Key mapping for folding
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+" Mapping // to multiple selecting, can be followed with c-g-n
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
 "set colorcolumn=80
 set number relativenumber
 set nowrap
@@ -50,6 +65,9 @@ set tabstop=4 softtabstop=4
 set expandtab
 set smartindent
 set mouse=a
+
+" Configuration for nerdtree
+let NERDTreeShowHidden=1
 
 " Configuration for gutentags
 let g:gutentags_add_default_project_roots = 0
