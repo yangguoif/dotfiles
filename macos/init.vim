@@ -20,6 +20,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} "markdown previewer
+Plug 'mg979/vim-visual-multi'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -37,7 +38,6 @@ set softtabstop=2
 set shiftwidth=2
 syntax on
 
-map <silent> <C-n> :NERDTreeFocus<CR>
 map <C-S-h> gT
 map <C-S-l> gt
 map <C-S-t> <C-w>T
@@ -85,6 +85,7 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 
 " Configuration for nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1
 
 " Configuration for gutentags
