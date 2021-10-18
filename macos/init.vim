@@ -2,27 +2,39 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-commentary'
-Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox' " colourful nvim
+Plug 'preservim/nerdtree' " project folder structure
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs' " auto pair
+Plug 'tpope/vim-commentary' " commenting support
+Plug 'vim-airline/vim-airline' " button status bar
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc requires nodejs installed
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'bagrat/vim-buffet'
-Plug 'dyng/ctrlsf.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+Plug 'ludovicchabant/vim-gutentags' "tag helper
+Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
+Plug 'dyng/ctrlsf.vim' "global search
+Plug 'tpope/vim-surround' " surrounding characters
+Plug 'tpope/vim-repeat' " . support
 Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} "markdown previewer
+
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 call plug#end()
 
 colorscheme gruvbox
 filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 syntax on
 
 map <silent> <C-n> :NERDTreeFocus<CR>
@@ -65,6 +77,12 @@ set tabstop=4 softtabstop=4
 set expandtab
 set smartindent
 set mouse=a
+set hidden
+set wrap linebreak
+
+" set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
 
 " Configuration for nerdtree
 let NERDTreeShowHidden=1
