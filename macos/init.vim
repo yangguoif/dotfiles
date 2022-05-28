@@ -23,8 +23,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch'
 
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+" js and jsx support
+Plug 'jbgutierrez/vim-babel'
+Plug 'mattn/webapi-vim'
 
 call plug#end()
 
