@@ -23,9 +23,17 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch'
 
-" js and jsx support
-Plug 'jbgutierrez/vim-babel'
-Plug 'mattn/webapi-vim'
+" js, ts, jsx and tsx language highlight
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" code compliance check
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 call plug#end()
 
