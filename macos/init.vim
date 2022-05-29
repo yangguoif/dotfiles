@@ -90,13 +90,15 @@ set mouse=a
 set hidden
 set wrap linebreak
 
+
 " set filetypes as typescriptreact
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-
 
 " Configuration for nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1
+autocmd VimEnter * NERDTree
+autocmd BufWinEnter * NERDTreeMirror
 
 " Configuration for gutentags
 let g:gutentags_add_default_project_roots = 0
