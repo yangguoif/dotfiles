@@ -22,6 +22,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} "markdown previewer
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch'
+Plug 'jparise/vim-graphql' " graphql highlight support
 
 " js, ts, jsx and tsx language highlight
 Plug 'pangloss/vim-javascript'
