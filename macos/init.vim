@@ -91,6 +91,8 @@ set mouse=a
 set hidden
 set wrap linebreak
 
+set foldmethod=indent
+set foldlevelstart=20
 
 " set filetypes as typescriptreact
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
