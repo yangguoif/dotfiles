@@ -7,7 +7,7 @@ Plug 'preservim/nerdtree' " project folder structure
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs' " auto pair
-Plug 'tpope/vim-commentary' " commenting support
+Plug 'preservim/nerdcommenter' " commenting support
 Plug 'vim-airline/vim-airline' " button status bar
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc requires nodejs installed
 Plug 'ludovicchabant/vim-gutentags' "tag helper
