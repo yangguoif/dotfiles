@@ -23,6 +23,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch'
 Plug 'jparise/vim-graphql' " graphql highlight support
+Plug 'pantharshit00/vim-prisma' " prisma highlight support
 
 " js, ts, jsx and tsx language highlight
 Plug 'pangloss/vim-javascript'
