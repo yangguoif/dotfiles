@@ -9,7 +9,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs' " auto pair
 Plug 'preservim/nerdcommenter' " commenting support
 Plug 'vim-airline/vim-airline' " button status bar
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc requires nodejs installed
 Plug 'ludovicchabant/vim-gutentags' "tag helper
 Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
 Plug 'dyng/ctrlsf.vim' "global search
@@ -19,7 +18,7 @@ Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} "markdown previewer
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } "markdown previewer
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch'
 Plug 'jparise/vim-graphql' " graphql highlight support
@@ -103,6 +102,19 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1
 autocmd VimEnter * NERDTree
 autocmd BufWinEnter * NERDTreeMirror
+
+" COC configurations
+let g:coc_node_path = '/usr/local/bin/node'
+" use <tab> for trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
 
 " Configuration for gutentags
 let g:gutentags_add_default_project_roots = 0
