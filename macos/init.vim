@@ -7,7 +7,7 @@ Plug 'preservim/nerdtree' " project folder structure
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs' " auto pair
-Plug 'preservim/nerdcommenter' " commenting support
+Plug 'tpope/vim-commentary' " commenting support
 Plug 'vim-airline/vim-airline' " button status bar
 Plug 'ludovicchabant/vim-gutentags' "tag helper
 Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
@@ -105,16 +105,7 @@ autocmd BufWinEnter * NERDTreeMirror
 
 " COC configurations
 let g:coc_node_path = '/usr/local/bin/node'
-" use <tab> for trigger completion and navigate to the next complete item
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Configuration for gutentags
 let g:gutentags_add_default_project_roots = 0
