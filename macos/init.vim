@@ -97,6 +97,10 @@ set foldlevelstart=20
 " set filetypes as typescriptreact
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
+" visible white spaces
+set listchars=eol:¬,tab:»\ ,space:.
+set list
+
 " Configuration for nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1
