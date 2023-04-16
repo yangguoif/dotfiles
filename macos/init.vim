@@ -23,6 +23,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch'
 Plug 'jparise/vim-graphql' " graphql highlight support
 Plug 'pantharshit00/vim-prisma' " prisma highlight support
+Plug 'github/copilot.vim'
 
 " js, ts, jsx and tsx language highlight
 Plug 'pangloss/vim-javascript'
