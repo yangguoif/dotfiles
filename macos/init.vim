@@ -8,6 +8,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs' " auto pair
 Plug 'tpope/vim-commentary' " commenting support
+" context aware commenting
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'suy/vim-context-commentstring'
 Plug 'vim-airline/vim-airline' " button status bar
 Plug 'ludovicchabant/vim-gutentags' "tag helper
 Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
