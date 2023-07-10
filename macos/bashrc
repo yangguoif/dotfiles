@@ -109,6 +109,9 @@ fi
 # enable programmable completion features
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+# brew path
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
