@@ -134,6 +134,9 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# TODO: double check, docker cli
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+
 # export PATH="$HOME/.bin:$PATH"
 
 # source $HOME/.asdf/asdf.sh
@@ -151,4 +154,4 @@ fi
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 
 # enable direnv
-eval "$(direnv hook bash)"
+# eval "$(direnv hook bash)"
