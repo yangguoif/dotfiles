@@ -148,6 +148,7 @@ fi
 # enable asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 
 # enable direnv
 eval "$(direnv hook bash)"
