@@ -155,4 +155,4 @@ fi
 export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 
 # enable direnv
-# eval "$(direnv hook bash)"
+eval "$(direnv hook bash)"

@@ -13,7 +13,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'suy/vim-context-commentstring'
 Plug 'vim-airline/vim-airline' " button status bar
 Plug 'ludovicchabant/vim-gutentags' "tag helper
-Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
 Plug 'dyng/ctrlsf.vim' "global search
 Plug 'tpope/vim-surround' " surrounding characters
 Plug 'tpope/vim-repeat' " . support
