@@ -23,10 +23,11 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } "markdown previewer
 Plug 'mg979/vim-visual-multi'
-Plug 'tpope/vim-eunuch'
-Plug 'jparise/vim-graphql' " graphql highlight support
-Plug 'pantharshit00/vim-prisma' " prisma highlight support
-Plug 'github/copilot.vim'
+Plug 'tpope/vim-eunuch' " UNIX shell commands in vim
+Plug 'vim-test/vim-test' " test runner
+" Plug 'jparise/vim-graphql' " graphql highlight support
+" Plug 'pantharshit00/vim-prisma' " prisma highlight support
+" Plug 'github/copilot.vim'
 
 " js, ts, jsx and tsx language highlight
 Plug 'pangloss/vim-javascript'
@@ -107,12 +108,16 @@ set list
 
 " Configuration for nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 autocmd VimEnter * NERDTree
 autocmd BufWinEnter * NERDTreeMirror
 
+" Configuration for fzf
+nnoremap <leader>f :GFiles<CR>
+
 " COC configurations
-let g:coc_node_path = '/usr/local/bin/node'
+let g:coc_node_path = '~/.asdf/shims/node'
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Configuration for gutentags
