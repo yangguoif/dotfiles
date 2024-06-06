@@ -2,48 +2,39 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'morhetz/gruvbox' " colourful nvim
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'preservim/nerdtree' " project folder structure
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs' " auto pair
 Plug 'tpope/vim-commentary' " commenting support
-" context aware commenting
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'suy/vim-context-commentstring'
-Plug 'vim-airline/vim-airline' " button status bar
+Plug 'suy/vim-context-commentstring' " context aware commenting
+Plug 'vim-airline/vim-airline' " bottom status bar
 Plug 'ludovicchabant/vim-gutentags' "tag helper
 Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
 Plug 'dyng/ctrlsf.vim' "global search
 Plug 'tpope/vim-surround' " surrounding characters
 Plug 'tpope/vim-repeat' " . support
-Plug 'inkarkat/vim-ReplaceWithRegister'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-line'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } "markdown previewer
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch' " UNIX shell commands in vim
-Plug 'vim-test/vim-test' " test runner
+" Plug 'vim-test/vim-test' " test runner
 " Plug 'jparise/vim-graphql' " graphql highlight support
 " Plug 'pantharshit00/vim-prisma' " prisma highlight support
 " Plug 'github/copilot.vim'
 
 " js, ts, jsx and tsx language highlight
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
-" code compliance check
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = [
-  \ 'coc-tsserver'
-  \ ]
+"Plug 'pangloss/vim-javascript'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 call plug#end()
 
-colorscheme gruvbox
+" Colour scheme
+colorscheme catppuccin-mocha
+let g:airline_theme = 'catppuccin'
+
 filetype plugin indent on
 " On pressing tab, insert 2 spaces
 set expandtab
@@ -57,28 +48,6 @@ syntax on
 map <C-S-h> gT
 map <C-S-l> gt
 map <C-S-t> <C-w>T
-
-" Key mapping for vim-buffet
-noremap <Tab> :bn!<CR>
-noremap <S-Tab> :bp!<CR>
-noremap <Leader><Tab> :Bw<CR>
-noremap <Leader><S-Tab> :Bw!<CR>
-noremap <C-t> :tabnew split<CR>
-
-nmap <C-F>f <Plug>CtrlSFPrompt
-vmap <C-F>f <Plug>CtrlSFVwordPath
-vmap <C-F>F <Plug>CtrlSFVwordExec
-nmap <C-F>n <Plug>CtrlSFCwordPath
-nmap <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-
-" Key mapping for folding
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
 
 " Mapping // to multiple selecting, can be followed with c-g-n
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
@@ -116,9 +85,27 @@ autocmd BufWinEnter * NERDTreeMirror
 " Configuration for fzf
 nnoremap <leader>f :GFiles<CR>
 
-" COC configurations
-let g:coc_node_path = '~/.asdf/shims/node'
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" Key mapping for vim-buffet
+noremap <Tab> :bn!<CR>
+noremap <S-Tab> :bp!<CR>
+noremap <Leader><Tab> :Bw<CR>
+noremap <Leader><S-Tab> :Bw!<CR>
+noremap <C-t> :tabnew split<CR>
+
+nmap <C-F>f <Plug>CtrlSFPrompt
+vmap <C-F>f <Plug>CtrlSFVwordPath
+vmap <C-F>F <Plug>CtrlSFVwordExec
+nmap <C-F>n <Plug>CtrlSFCwordPath
+nmap <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+" Key mapping for folding
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
 
 " Configuration for gutentags
 let g:gutentags_add_default_project_roots = 0
