@@ -4,31 +4,30 @@ filetype off
 call plug#begin('~/.config/nvim/plugged')
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'preservim/nerdtree' " project folder structure
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'jiangmiao/auto-pairs' " auto pair
 Plug 'tpope/vim-commentary' " commenting support
 Plug 'suy/vim-context-commentstring' " context aware commenting
 Plug 'vim-airline/vim-airline' " bottom status bar
 Plug 'ludovicchabant/vim-gutentags' "tag helper
 Plug 'bagrat/vim-buffet' "top tab/buffer/windows support
-Plug 'dyng/ctrlsf.vim' "global search
 Plug 'tpope/vim-surround' " surrounding characters
 Plug 'tpope/vim-repeat' " . support
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } "markdown previewer
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-eunuch' " UNIX shell commands in vim
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " syntax highlight
+" LSP
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+
 " Plug 'vim-test/vim-test' " test runner
-" Plug 'jparise/vim-graphql' " graphql highlight support
-" Plug 'pantharshit00/vim-prisma' " prisma highlight support
 " Plug 'github/copilot.vim'
-
-" js, ts, jsx and tsx language highlight
-"Plug 'pangloss/vim-javascript'
-"Plug 'leafgarland/typescript-vim'
-"Plug 'peitalin/vim-jsx-typescript'
-"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'junegunn/fzf.vim'
+" Plug 'dyng/ctrlsf.vim' "global search
 call plug#end()
 
 " Colour scheme
@@ -64,6 +63,7 @@ set smartindent
 set mouse=a
 set hidden
 set wrap linebreak
+set modifiable
 
 set foldmethod=indent
 set foldlevelstart=20
@@ -83,7 +83,7 @@ autocmd VimEnter * NERDTree
 autocmd BufWinEnter * NERDTreeMirror
 
 " Configuration for fzf
-nnoremap <leader>f :GFiles<CR>
+"nnoremap <leader>f :GFiles<CR>
 
 " Key mapping for vim-buffet
 noremap <Tab> :bn!<CR>
@@ -92,14 +92,19 @@ noremap <Leader><Tab> :Bw<CR>
 noremap <Leader><S-Tab> :Bw!<CR>
 noremap <C-t> :tabnew split<CR>
 
-nmap <C-F>f <Plug>CtrlSFPrompt
-vmap <C-F>f <Plug>CtrlSFVwordPath
-vmap <C-F>F <Plug>CtrlSFVwordExec
-nmap <C-F>n <Plug>CtrlSFCwordPath
-nmap <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+" Configuration for fzf
+"nmap <C-F>f <Plug>CtrlSFPrompt
+"vmap <C-F>f <Plug>CtrlSFVwordPath
+"vmap <C-F>F <Plug>CtrlSFVwordExec
+"nmap <C-F>n <Plug>CtrlSFCwordPath
+"nmap <C-F>p <Plug>CtrlSFPwordPath
+"nnoremap <C-F>o :CtrlSFOpen<CR>
+"nnoremap <C-F>t :CtrlSFToggle<CR>
+"inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+" Configuration for telescope fzf
+nnoremap <C-F> <cmd>Telescope find_files<cr>
+nnoremap <C-S> <cmd>Telescope live_grep<cr>
 
 " Key mapping for folding
 inoremap <F9> <C-O>za
@@ -144,3 +149,6 @@ let g:gutentags_ctags_exclude = [
       \ '*.tmp',
       \ '*.cache',
       \ ]
+
+
+lua require('init')

@@ -31,6 +31,7 @@ brew install tmux
 install /junegunn/vim-plug/master/plug.vim
 ln -s $HOME/Documents/personal/dotfiles/macos/vimrc  $HOME/.vimrc
 ln -s $HOME/Documents/personal/dotfiles/macos/init.vim  $HOME/.config/nvim/init.vim
+ln -s $HOME/Documents/personal/dotfiles/macos/init.lua  $HOME/.config/nvim/lua/init.lua
 install Plugins in nvim
 #####
 
