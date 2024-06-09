@@ -8,6 +8,7 @@ ln -s $HOME/Documents/personal/dotfiles/macos/bashrc ~/.bashrc
 ln -s $HOME/Documents/personal/dotfiles/macos/bash_profile ~/.bash_profile
 ln -s $HOME/Documents/personal/dotfiles/general/inputrc ~/.inputrc
 
+brew install --cask "font-jetbrains-mono-nerd-font"
 install xcode
     enable tools in terminal env: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 install homebrew + update
