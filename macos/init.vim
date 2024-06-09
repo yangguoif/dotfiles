@@ -25,6 +25,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " syntax highlight
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'vim-test/vim-test' " test runner
 call plug#end()
 
 " Colour scheme
@@ -74,6 +75,7 @@ set list
 
 " Configuration for nvim-tree
 nnoremap <leader>n :NvimTreeToggle<CR>
+nnoremap <leader>nf :NvimTreeFindFile<CR>
 
 " Key mapping for vim-buffet
 noremap <Tab> :bn!<CR>
@@ -96,6 +98,13 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+
+" Configuration for vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 " Configuration for gutentags
 let g:gutentags_add_default_project_roots = 0
@@ -154,7 +163,6 @@ lua require('init')
 " let NERDTreeShowHidden=1
 
 " Other plugins
-" Plug 'vim-test/vim-test' " test runner
 " Plug 'github/copilot.vim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'junegunn/fzf.vim'
