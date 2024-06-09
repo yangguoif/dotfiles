@@ -9,7 +9,6 @@ Plug 'nvim-tree/nvim-tree.lua'
 " fzf
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
-Plug 'jiangmiao/auto-pairs' " auto pair
 Plug 'tpope/vim-commentary' " commenting support
 Plug 'suy/vim-context-commentstring' " context aware commenting
 Plug 'vim-airline/vim-airline' " bottom status bar
@@ -26,6 +25,8 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'vim-test/vim-test' " test runner
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 call plug#end()
 
 " Colour scheme

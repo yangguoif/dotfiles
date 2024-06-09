@@ -19,3 +19,5 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require("nvim-tree").setup({})
+require("nvim-autopairs").setup {}
+require('nvim-ts-autotag').setup({})
