@@ -65,6 +65,7 @@ set buftype=
 
 set foldmethod=indent
 set foldlevelstart=20
+set autoindent
 
 " set filetypes as typescriptreact
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
