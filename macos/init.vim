@@ -4,6 +4,7 @@ filetype off
 call plug#begin('~/.config/nvim/plugged')
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'preservim/nerdtree' " project folder structure
+" fzf
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'jiangmiao/auto-pairs' " auto pair
@@ -63,7 +64,7 @@ set smartindent
 set mouse=a
 set hidden
 set wrap linebreak
-set modifiable
+set buftype=
 
 set foldmethod=indent
 set foldlevelstart=20
@@ -79,11 +80,6 @@ set list
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
-autocmd VimEnter * NERDTree
-autocmd BufWinEnter * NERDTreeMirror
-
-" Configuration for fzf
-"nnoremap <leader>f :GFiles<CR>
 
 " Key mapping for vim-buffet
 noremap <Tab> :bn!<CR>
@@ -103,8 +99,13 @@ noremap <C-t> :tabnew split<CR>
 "inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 " Configuration for telescope fzf
-nnoremap <C-F> <cmd>Telescope find_files<cr>
-nnoremap <C-S> <cmd>Telescope live_grep<cr>
+nnoremap tf <cmd>Telescope find_files<cr>
+nnoremap ts <cmd>Telescope live_grep<cr>
+nnoremap tr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+
+" Configuration for definition search
+nnoremap gd <cmd>lua vim.lsp.buf.definition()<cr>
+nnoremap gD <cmd>lua vim.lsp.buf.declaration()<cr>
 
 " Key mapping for folding
 inoremap <F9> <C-O>za

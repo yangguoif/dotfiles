@@ -1,21 +1,19 @@
+-- Mason LSP setup
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { "tsserver", "lua_ls" },
+}
+require("lspconfig").tsserver.setup({})
+require("lspconfig").lua_ls.setup({})
+
+-- Syntax highlight setup
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "typescript", "json", "css", "tsx", "html" },
-  -- sync_install = false,
-  -- auto_install = true,,
+  ensure_installed = { "javascript", "typescript", "json", "css", "tsx", "html", "lua" },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
-  -- indent = {
-  --   enable = true
-  -- }
+  indent = {
+    enable = true
+  }
 }
-
-require("mason").setup()
-require("mason-lspconfig").setup {
-    ensure_installed = { "tsserver" },
-}
-require("lspconfig").tsserver.setup({})
-
-vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
