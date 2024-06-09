@@ -9,6 +9,8 @@ ln -s $HOME/Documents/personal/dotfiles/macos/bash_profile ~/.bash_profile
 ln -s $HOME/Documents/personal/dotfiles/general/inputrc ~/.inputrc
 
 brew install --cask "font-jetbrains-mono-nerd-font"
+brew install node
+brew install wget
 install xcode
     enable tools in terminal env: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 install homebrew + update
@@ -30,7 +32,6 @@ brew install tmux
  brew install ripgrep
 
 install /junegunn/vim-plug/master/plug.vim
-ln -s $HOME/Documents/personal/dotfiles/macos/vimrc  $HOME/.vimrc
 ln -s $HOME/Documents/personal/dotfiles/macos/init.vim  $HOME/.config/nvim/init.vim
 ln -s $HOME/Documents/personal/dotfiles/macos/init.lua  $HOME/.config/nvim/lua/init.lua
 install Plugins in nvim
