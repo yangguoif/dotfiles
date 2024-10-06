@@ -22,6 +22,7 @@ brew install reattach-to-user-namespace
 brew install bash-completion
 brew install tmux
   link tmux.conf.macos to ~/.tmux.conf
+  install tmux tpm
 
 ##### vim/nvim setup
  brew install neovim
