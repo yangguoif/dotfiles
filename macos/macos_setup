@@ -9,6 +9,7 @@ ln -s $HOME/Documents/personal/dotfiles/macos/bash_profile ~/.bash_profile
 ln -s $HOME/Documents/personal/dotfiles/general/inputrc ~/.inputrc
 
 brew install --cask "font-jetbrains-mono-nerd-font"
+brew install asdf
 brew install node
 brew install wget
 install xcode

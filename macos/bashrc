@@ -140,8 +140,6 @@ export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 # export PATH="$HOME/.bin:$PATH"
 
-# source $HOME/.asdf/asdf.sh
-
 # enable bash-git-prompt, check details at https://github.com/magicmonty/bash-git-prompt
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
@@ -150,9 +148,9 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 fi
 
 # enable asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
+export PATH=$(brew --prefix)/bin/asdf:$PATH
+export ASDF_DATA_DIR="/Users/yangguo/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 # enable direnv
 eval "$(direnv hook bash)"
