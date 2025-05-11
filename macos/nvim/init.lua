@@ -38,20 +38,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  -- { -- Adds git related signs to the gutter, as well as utilities for managing changes
-  --   'lewis6991/gitsigns.nvim',
-  -- },
-
   -- { -- Useful plugin to show you pending keybinds.
   --   'folke/which-key.nvim',
   -- },
-
-  -- NOTE: Plugins can specify dependencies.
-  --
-  -- The dependencies are proper plugin specifications as well - anything
-  -- you do for a plugin at the top level, you can do for a dependency.
-  --
-  -- Use the `dependencies` key to specify the dependencies of a particular plugin
 
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
@@ -658,11 +647,7 @@ require('lazy').setup({
       vim.keymap.set("n", "<C-n>", function() harpoon:list():next() end)
     end
   },
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    config = true
-  },
+
   {
     "kylechui/nvim-surround",
     version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
@@ -671,6 +656,13 @@ require('lazy').setup({
         require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
         })
+    end
+  },
+
+  {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
     end
   }
 
