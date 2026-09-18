@@ -8,22 +8,33 @@ ln -s $HOME/Documents/personal/dotfiles/macos/bashrc ~/.bashrc
 ln -s $HOME/Documents/personal/dotfiles/macos/bash_profile ~/.bash_profile
 ln -s $HOME/Documents/personal/dotfiles/general/inputrc ~/.inputrc
 
+install homebrew + update
+
 brew install --cask "font-jetbrains-mono-nerd-font"
 brew install asdf
-brew install node
 brew install wget
 install xcode
     enable tools in terminal env: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-install homebrew + update
 brew install --cask google-chrome
 brew install --cask iterm2
-brew install git
 brew install --cask 1password
 brew install reattach-to-user-namespace
 brew install bash-completion
 brew install tmux
-  link tmux.conf.macos to ~/.tmux.conf
+  ln -s $HOME/Documents/personal/dotfiles/macos/tmux.conf.macos to ~/.tmux.conf
   install tmux tpm
+
+install omlx
+  download Jundot/Qwen3.6-35B-A3B-oQ6-fp16-mtp
+  download deepsweet/Qwen3.6-35B-A3B-MLX-oQ5-FP16
+
+brew install --cask visual-studio-code
+  install Catppuccin theme
+  Claude Code for vscode
+  opencode for vscode
+  oxc
+  Typescript
+  Vim
 
 ##### vim/nvim setup
  brew install neovim
@@ -33,7 +44,7 @@ brew install tmux
  brew install pt
  brew install ripgrep
 
-install /junegunn/vim-plug/master/plug.vim
+# install /junegunn/vim-plug/master/plug.vim
 ln -s $HOME/Documents/personal/dotfiles/macos/init.vim  $HOME/.config/nvim/init.vim
 ln -s $HOME/Documents/personal/dotfiles/macos/init.lua  $HOME/.config/nvim/lua/init.lua
 install Plugins in nvim
@@ -43,34 +54,25 @@ install asdf-vm via Git
 add .tool-versions to home directory with system reference. e.g. 'nodejs system'
 
 brew install direnv
-brew install openssl
 brew install --cask fork
 brew install awscli
     aws configure sso
 brew install postgresql
     createdb `whoami`
 brew install --cask pgadmin4
-brew install --cask adobe-acrobat-reader
 brew install nmap
 brew install bash-git-prompt
 brew install --cask docker
-brew install yarn
 
+# Ruby on Rails
 brew tap "puma/puma"
 brew install "puma/puma/puma-dev"
-
-# "Setting up puma-dev"
 sudo puma-dev -setup
 puma-dev -install
 # may need
 # security add-trusted-cert -k login.keychain-db ~/Library/Application\ Support/io.puma.dev/cert.pem
 cd ~/.puma-dev
 echo port_number > project_name
-
-
-# Jenkins
-brew install --cask homebrew/cask-versions/adoptopenjdk8
-brew install jenkins-lts
 
 # LocalStack for mocking AWS services
 pip install localstack
@@ -80,10 +82,6 @@ pip install awscli-local
 brew install --cask graphiql
 
 # Optional
-brew tap heroku/brew && brew install heroku
-brew install youtube-dl
-brew install --cask vlc
-brew install --cask slack
 brew install --cask wechat
 brew install --cask postman
 brew install memcached
@@ -95,13 +93,3 @@ brew install python3
 brew install kubectl
 brew install --cask virtualbox
 brew install --cask drawio
-
-
-For trading
-* Download ThinkOrSwim
-* Download Interactive Brokers
-* Install zipline: https://zipline.ml4trading.io/install.html
-
-
-TODO:
-brew "diff-so-fancy"
