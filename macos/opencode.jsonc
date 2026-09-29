@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "omlx": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "oMLX",
+      "options": {
+        "baseURL": "http://127.0.0.1:8000/v1",
+        "apiKey": "sk-omlx-change-me"
+      },
+      "models": {
+        "Qwen3.6-35B-A3B-oQ6-fp16-mtp": {
+          "name": "Qwen3.6-35B-A3B-oQ6-fp16-mtp",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "attachment": true,
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "octopus-local-remote-mcp": {
+      "type": "remote",
+      "url": "http://localhost:8065/mcp",
+      "enabled": true,
+      "headers": {
+        "X-Octopus-ApiKey": "API-key"
+      }
+    },
+  },
+  "model": "omlx/Qwen3.6-35B-A3B-oQ6-fp16-mtp"
+}
+

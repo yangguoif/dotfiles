@@ -21,12 +21,19 @@ brew install --cask 1password
 brew install reattach-to-user-namespace
 brew install bash-completion
 brew install tmux
-  ln -s $HOME/Documents/personal/dotfiles/macos/tmux.conf.macos to ~/.tmux.conf
+  ln -s $HOME/Documents/personal/dotfiles/macos/tmux.conf.macos ~/.tmux.conf
   install tmux tpm
 
 install omlx
   download Jundot/Qwen3.6-35B-A3B-oQ6-fp16-mtp
   download deepsweet/Qwen3.6-35B-A3B-MLX-oQ5-FP16
+
+install opencode
+  ln -s $HOME/Documents/personal/dotfiles/macos/opencode.jsonc ~/.config/opencode/opencode.jsonc
+
+install workmux
+  ln -s $HOME/Documents/personal/dotfiles/macos/workmux_config.yaml ~/.config/workmux/config.yaml
+  
 
 brew install --cask visual-studio-code
   install Catppuccin theme
@@ -45,8 +52,8 @@ brew install --cask visual-studio-code
  brew install ripgrep
 
 # install /junegunn/vim-plug/master/plug.vim
-ln -s $HOME/Documents/personal/dotfiles/macos/init.vim  $HOME/.config/nvim/init.vim
-ln -s $HOME/Documents/personal/dotfiles/macos/init.lua  $HOME/.config/nvim/lua/init.lua
+ln -s ~/Documents/personal/dotfiles/macos/nvim/init.lua ~/.config/nvim/init.lua
+ln -s ~/Documents/projects/dotfiles/macos/nvim/lua/ ~/.config/nvim/lua
 install Plugins in nvim
 #####
 
