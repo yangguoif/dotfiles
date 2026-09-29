@@ -34,7 +34,6 @@ install opencode
 install workmux
   ln -s $HOME/Documents/personal/dotfiles/macos/workmux_config.yaml ~/.config/workmux/config.yaml
   
-
 brew install --cask visual-studio-code
   install Catppuccin theme
   Claude Code for vscode
