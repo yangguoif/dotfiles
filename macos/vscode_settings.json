@@ -1,0 +1,79 @@
+{
+    "git.openRepositoryInParentFolders": "always",
+    "editor.renderWhitespace": "all",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.lineNumbers": "relative",
+    "editor.fontSize": 14,
+    "explorer.autoReveal": true,
+    "files.eol": "\n",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "claudeCode.preferredLocation": "panel",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "chat.viewSessions.orientation": "stacked",
+    "diffEditor.diffAlgorithm": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "window.openFilesInNewWindow": "default",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true,
+        "**/coverage": true
+    },
+    // Languages
+    "js/ts.preferences.useAliasesForRenames": false,
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    "js/ts.inlayHints.parameterNames.enabled": "none",
+    "js/ts.inlayHints.parameterTypes.enabled": false,
+    "js/ts.inlayHints.propertyDeclarationTypes.enabled": false,
+    "js/ts.inlayHints.functionLikeReturnTypes.enabled": false,
+    "js/ts.preferences.quoteStyle": "double",
+    "js/ts.preferences.importModuleSpecifier": "shortest",
+    "js/ts.implicitProjectConfig.module": "CommonJS",
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "never",
+            "source.organizeImports": "never",
+            "source.fixAll.eslint": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "never",
+            "source.organizeImports": "never",
+            "source.fixAll.eslint": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "never",
+            "source.fixAll.eslint": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "claudeCode.hideOnboarding": true,
+}
